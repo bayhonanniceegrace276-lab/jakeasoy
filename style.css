@@ -1,0 +1,377 @@
+
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #081b29;
+    color: #ededed;
+}
+
+/* NAVIGATION BAR */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #051520;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #00eeff;
+}
+
+.navbar a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: .3s;
+}
+
+.navbar a:hover {
+    color: #00eeff;
+}
+
+/* HOME SECTION */
+.home {
+    min-height: 100vh;
+    padding: 120px 10% 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.intro {
+    color: #00eeff;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.home-content h1 {
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.home-content h1 span {
+    color: #00eeff;
+}
+
+.home-content h2 {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.animated-text {
+    color: #00eeff;
+    animation: textGlow 2s infinite alternate;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 20px 0;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #00eeff;
+    color: #081b29;
+    border: 2px solid #00eeff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #00eeff;
+    box-shadow: 0 0 15px #00eeff;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #00eeff;
+}
+
+.btn-outline:hover {
+    background: #00eeff;
+    color: #081b29;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+    margin-top: 25px;
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #00eeff;
+    border-radius: 50%;
+    color: #00eeff;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.social-links a:hover {
+    background: #00eeff;
+    color: #081b29;
+    box-shadow: 0 0 15px #00eeff;
+}
+
+/* PROFILE PICTURE */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-circle {
+    width: 320px;
+    height: 320px;
+    padding: 8px;
+    border-radius: 50%;
+    background: linear-gradient(
+        45deg,
+        #00eeff,
+        #0066ff,
+        #00eeff
+    );
+    box-shadow: 0 0 25px #00eeff;
+    animation: rotateGlow 4s linear infinite;
+}
+
+.profile-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #081b29;
+}
+
+.profile-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+/* SECTION SETTINGS */
+.section {
+    min-height: 70vh;
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 38px;
+    margin-bottom: 40px;
+}
+
+.section-title span {
+    color: #00eeff;
+}
+
+/* ABOUT CARD */
+.about-card {
+    max-width: 800px;
+    margin: auto;
+    padding: 35px;
+    background: #112e42;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 238, 255, 0.15);
+    line-height: 1.8;
+    transition: .3s;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #00eeff;
+}
+
+/* SKILLS AND PROJECTS */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #112e42;
+    padding: 35px 20px;
+    border-radius: 15px;
+    transition: .3s;
+    border: 1px solid transparent;
+}
+
+.card h3 {
+    color: #00eeff;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #00eeff;
+    box-shadow: 0 0 20px rgba(0, 238, 255, .4);
+}
+
+/* CONTACT SECTION */
+#contact .about-card p {
+    margin-bottom: 15px;
+}
+
+/* FOOTER */
+footer {
+    background: #051520;
+    text-align: center;
+    padding: 25px;
+    color: #aaa;
+}
+
+/* ANIMATIONS */
+@keyframes rotateGlow {
+    0% {
+        box-shadow: 0 0 15px #00eeff;
+    }
+    50% {
+        box-shadow: 0 0 35px #0066ff;
+    }
+    100% {
+        box-shadow: 0 0 15px #00eeff;
+    }
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 5px #00eeff;
+    }
+    to {
+        text-shadow: 0 0 20px #00eeff;
+    }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .header {
+        padding: 20px 5%;
+    }
+
+    .home {
+        padding: 120px 5% 50px;
+    }
+
+    .home-content h1 {
+        font-size: 35px;
+    }
+
+    .profile-circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .navbar a {
+        margin: 0;
+        font-size: 13px;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 160px;
+    }
+
+    .home-content {
+        width: 100%;
+    }
+
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .home-content h2 {
+        font-size: 23px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .profile-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .section {
+        padding: 80px 5%;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
